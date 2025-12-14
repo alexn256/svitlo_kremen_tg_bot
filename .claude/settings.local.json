@@ -18,7 +18,8 @@
       "Bash(source venv/bin/activate)",
       "Bash(pip install pdfplumber)",
       "Bash(cat /home/alexn256/dev/projects/svitlo_kremen_tg_bot/parser/parsing_stats.txt)",
-      "Bash(/dev/null)"
+      "Bash(/dev/null)",
+      "Bash(cat /home/alexn256/dev/projects/svitlo_kremen_tg_bot/parser/skipped_lines.txt)"
     ]
   }
 }

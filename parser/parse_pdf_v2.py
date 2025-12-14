@@ -56,18 +56,26 @@ def extract_houses_from_text(text: str) -> List[str]:
     """
     Извлекает номера домов из текста.
     Пример: "10, 12, 14-16, 18а" -> ['10', '12', '14', '15', '16', '18а']
+    Обрабатывает сложные случаи: "1/49,12, 8" -> ['1/49', '12', '8']
     """
     houses = []
-    # Разбиваем по запятым, точкам с запятой
+
+    # Очищаємо текст від зайвих символів в кінці
+    text = text.rstrip(',;.: ')
+
+    # Спочатку розбиваємо по комах та крапках з комами
+    # Але враховуємо, що може бути "47,55," де кома склеює номери
     parts = re.split(r'[,;]\s*', text)
 
     for part in parts:
-        part = part.strip()
+        part = part.strip().rstrip(',;.: ')
         if not part:
             continue
 
-        # Проверяем, похоже ли на номер дома (начинается с цифры)
+        # Перевіряємо, чи це номер будинку (починається з цифри)
+        # Дозволяємо: 10, 10а, 10/5, 10-20
         if re.match(r'^\d', part):
+            # Якщо це діапазон (наприклад "32- 56" або "32-56")
             expanded = expand_house_range(part)
             houses.extend(expanded)
 
@@ -117,38 +125,68 @@ def parse_address_line(text: str) -> List[Dict[str, any]]:
 def parse_streets_in_text(text: str, city: Optional[str]) -> List[Dict[str, any]]:
     """
     Парсит улицы и дома из текста.
+    Улучшенная версия - разбивает текст на сегменты по вулицям.
     """
     results = []
 
     # Очищаем начало текста от : и пробелов
     text = text.lstrip(': ')
 
-    # Паттерн для улицы с префиксом: вул.Грабчака, 10, 12, 14
-    street_with_prefix = re.compile(
-        r'(вул\.|пров\.|просп\.|пл\.)\s*([А-ЯІЇЄҐа-яіїєґ\'\s-]+?)(?:\s*,|\s+)(\d[^вул\.пров\.просп\.пл\.м\.с\.смт\.]+?)(?=\s+(?:вул\.|пров\.|просп\.|пл\.|м\.|с\.|смт\.)|$)',
+    # Ищем все вулиці в тексті (з префіксом)
+    # Дозволяємо різні формати: "вул.Назва, 1" або "вул.Назва (б. 1"
+    street_pattern = re.compile(
+        r'(вул\.|пров\.|просп\.|пл\.)\s*([А-ЯІЇЄҐа-яіїєґ\s\'\-]+?)(?=\s*,|\s*;|\s+\d|\s*\()',
         re.IGNORECASE
     )
 
-    for match in street_with_prefix.finditer(text):
-        prefix = match.group(1)
-        street_name = match.group(2).strip().rstrip(',;:')
-        houses_text = match.group(3).strip()
+    # Знаходимо всі позиції вулиць
+    street_matches = list(street_pattern.finditer(text))
 
-        street = f"{prefix} {street_name}"
-        houses = extract_houses_from_text(houses_text)
+    if street_matches:
+        for i, match in enumerate(street_matches):
+            prefix = match.group(1)
+            street_name = match.group(2).strip().rstrip(',;:').strip()
+            street = f"{prefix} {street_name}"
 
-        for house in houses:
-            if house:
-                results.append({
-                    'city': city,
-                    'street': street,
-                    'house': house
-                })
+            # Визначаємо початок та кінець сегменту для цієї вулиці
+            start_pos = match.end()
+
+            # Кінець - це або наступна вулиця, або наступне місто, або кінець тексту
+            if i + 1 < len(street_matches):
+                end_pos = street_matches[i + 1].start()
+            else:
+                # Шукаємо наступне місто або кінець рядка
+                next_city = re.search(r'\s+(м\.|с\.|смт\.)\s*[А-ЯІЇЄҐ]', text[start_pos:])
+                if next_city:
+                    end_pos = start_pos + next_city.start()
+                else:
+                    end_pos = len(text)
+
+            # Витягуємо текст з номерами будинків
+            houses_segment = text[start_pos:end_pos].strip()
+
+            # Видаляємо початкові коми, крапки з комою тощо
+            houses_segment = houses_segment.lstrip(',;: ').rstrip(',;: ')
+
+            # Обробляємо формат "б. 1, 2, 3" або "(б. 1, 2, 3)"
+            houses_segment = re.sub(r'\(?\s*б\.?\s*', '', houses_segment, flags=re.IGNORECASE)
+            houses_segment = re.sub(r'\)', '', houses_segment)
+
+            # Витягуємо номери будинків
+            houses = extract_houses_from_text(houses_segment)
+
+            for house in houses:
+                if house:
+                    results.append({
+                        'city': city,
+                        'street': street,
+                        'house': house
+                    })
 
     # Также пытаемся найти улицы без явного префикса
     # Например: "Залізна, 10, 12, 14" или "Баленка 10, 12, 14"
     # Но только если нет префиксов вул./пров./просп.
-    if not street_with_prefix.search(text):
+    if not street_matches:
         # Ищем паттерн: Название (с большой буквы), затем цифры
         simple_street = re.compile(
             r'([А-ЯІЇЄҐ][а-яіїєґ\'\s-]+?)(?:\s*,|\s+)(\d[^м\.с\.смт\.]+)',
