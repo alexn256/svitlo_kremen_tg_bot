@@ -1,11 +1,5 @@
-[providers]
-java = "21"
-
 [phases.setup]
-nixPkgs = ["...", "jdk21", "gradle"]
-
-[phases.install]
-cmds = ["echo 'Install phase'"]
+nixPkgs = ["jdk21"]
 
 [phases.build]
 cmds = [
