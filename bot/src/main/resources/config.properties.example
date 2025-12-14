@@ -1,0 +1,8 @@
+# Telegram Bot Configuration
+# Скопіюйте цей файл в config.properties і заповніть своїми даними
+
+# Токен бота (отримайте у @BotFather)
+bot.token=YOUR_BOT_TOKEN_HERE
+
+# Шлях до файлу з адресами (відносний від bot/)
+addresses.file.path=../parser/addresses.json

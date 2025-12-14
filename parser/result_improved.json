@@ -1,0 +1,1406 @@
+[
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Параджанова-1",
+    "house": "5"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Параджанова-1",
+    "house": "9"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Максима Красноуцького",
+    "house": "3"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Максима Красноуцького",
+    "house": "3а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Пчілки О.-10",
+    "house": "13"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Пчілки О.-10",
+    "house": "18"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Пчілки О.-10",
+    "house": "4"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Пчілки О.-10",
+    "house": "6"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Пчілки О.-10",
+    "house": "7"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Пчілки О.-10",
+    "house": "8"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "11а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "11б"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "12"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "13"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "14"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "16"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "16а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "18"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "20"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "22"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "22а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "24"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "24б"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "26"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "28"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "30"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "30а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "5"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "5а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "6"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "9"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "9а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Вовчка Марка-10",
+    "house": "9б"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "13"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "15"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "15а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "17"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "17а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "19"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "19б"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "2"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "20"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "20а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "22"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "24"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "24а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "26"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "28"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "3"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "30"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "30а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "3а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "4"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "5"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "5а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "6"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "7"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "7а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "8"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "9"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Луценка Д.-11",
+    "house": "9а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "11"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "12"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "13"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "14"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "16"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "18"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "2/34"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "20"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "22"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "3"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "4"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "5"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "6"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "7"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "8"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Смарагдовий-10",
+    "house": "9"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Ставочний-1",
+    "house": "3"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Ставочний-1",
+    "house": "4"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Ставочний-1",
+    "house": "5"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Ставочний-1",
+    "house": "5а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Ставочний-1",
+    "house": "6"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Ставочний-1",
+    "house": "8"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Ставочний-1",
+    "house": "8а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "13"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "13а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "14"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "15"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "16"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "16а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "17"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "3"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "3а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "4"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "4а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "5"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "6"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "7"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "7а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "пров. Федора Лизогуба-10",
+    "house": "8"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Героїв України",
+    "house": "10"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Героїв України",
+    "house": "12"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Героїв України",
+    "house": "14"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Героїв України",
+    "house": "22"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Героїв України",
+    "house": "22г"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Героїв України",
+    "house": "4"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Спаська",
+    "house": "10"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Строни 2В",
+    "house": "5"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Строни 2В",
+    "house": "9"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Строни 2В",
+    "house": "9Б"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Строни 2В",
+    "house": "11А"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Строни 2В",
+    "house": "11Б"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Строни 2В",
+    "house": "15А"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Строни 15",
+    "house": "15А"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Строни 15",
+    "house": "19"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "м.Полтава",
+    "street": "вул. Портова",
+    "house": "21"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 3,
+    "subqueue": 1,
+    "queue_full": "3.1",
+    "city": "м.Полтава",
+    "street": "вул. Чумацький Шлях",
+    "house": "64"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 3,
+    "subqueue": 1,
+    "queue_full": "3.1",
+    "city": "м.Полтава",
+    "street": "вул. Ю. Кондратюка 17",
+    "house": "19"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 3,
+    "subqueue": 1,
+    "queue_full": "3.1",
+    "city": "м.Полтава",
+    "street": "вул. Шевченка1",
+    "house": "2"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 3,
+    "subqueue": 1,
+    "queue_full": "3.1",
+    "city": "м.Полтава",
+    "street": "вул. Шевченка1",
+    "house": "3"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 3,
+    "subqueue": 1,
+    "queue_full": "3.1",
+    "city": "м.Полтава",
+    "street": "вул. Шевченка1",
+    "house": "4"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 3,
+    "subqueue": 1,
+    "queue_full": "3.1",
+    "city": "м.Полтава",
+    "street": "вул. Шевченка1",
+    "house": "6"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 3,
+    "subqueue": 1,
+    "queue_full": "3.1",
+    "city": "м.Полтава",
+    "street": "вул. Шевченка1",
+    "house": "8"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 3,
+    "subqueue": 1,
+    "queue_full": "3.1",
+    "city": "м.Полтава",
+    "street": "вул. Шевченка1",
+    "house": "8А5"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 3,
+    "subqueue": 1,
+    "queue_full": "3.1",
+    "city": "м.Полтава",
+    "street": "вул. Шевченка1",
+    "house": "7"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 3,
+    "subqueue": 1,
+    "queue_full": "3.1",
+    "city": "м.Полтава",
+    "street": "вул. Будівельників",
+    "house": "56-Б)"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Гоголя",
+    "house": "34"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Симона Петлюри",
+    "house": "79"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Незалежності",
+    "house": "1а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Незалежності",
+    "house": "1б"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Незалежності",
+    "house": "3"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Незалежності",
+    "house": "3а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Незалежності",
+    "house": "5а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Незалежності",
+    "house": "7"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Незалежності",
+    "house": "25а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Антона Грицая",
+    "house": "10"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Антона Грицая",
+    "house": "12а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Соборності 41",
+    "house": "44"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "пров. Рибальський",
+    "house": "6"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Чураївни",
+    "house": "2б"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Чураївни",
+    "house": "2а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Будівельників",
+    "house": "27)"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Будівельників",
+    "house": "23)"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Полтава",
+    "street": "вул. Будівельників",
+    "house": "22)"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Горішні Плавні\" (АБК)",
+    "street": "вул. Миру 7",
+    "house": "10"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Горішні Плавні\" (АБК)",
+    "street": "вул. Миру 7",
+    "house": "10Б"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Горішні Плавні\" (АБК)",
+    "street": "вул. Миру 7",
+    "house": "12"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Горішні Плавні\" (АБК)",
+    "street": "вул. Миру 7",
+    "house": "12А"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Горішні Плавні\" (АБК)",
+    "street": "вул. Миру 7",
+    "house": "5"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Горішні Плавні\" (АБК)",
+    "street": "вул. Миру 7",
+    "house": "7"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Горішні Плавні\" (АБК)",
+    "street": "вул. Строни 2 автостоянка",
+    "house": "12"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Горішні Плавні\" (АБК)",
+    "street": "вул. Будівельників",
+    "house": "11)"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Горішні Плавні\" (АБК)",
+    "street": "вул. Будівельників",
+    "house": "16)"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Горішні Плавні\" (АБК)",
+    "street": "вул. Будівельників",
+    "house": "16)"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Горішні Плавні\" (АБК)",
+    "street": "вул. Будівельників",
+    "house": "16)"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 5,
+    "subqueue": 1,
+    "queue_full": "5.1",
+    "city": "м.Горішні Плавні\" (АБК)",
+    "street": "вул. Портова",
+    "house": "65)"
+  }
+]
