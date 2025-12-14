@@ -274,5 +274,13 @@ private fun loadConfig(): Properties {
         }
     }
 
+    if (!properties.containsKey("addresses.file.path")) {
+        val addressesPathFromEnv = System.getenv("ADDRESSES_FILE_PATH")
+        if (addressesPathFromEnv != null) {
+            properties.setProperty("addresses.file.path", addressesPathFromEnv)
+            logger.info { "Шлях до файлу адрес завантажено зі змінної середовища ADDRESSES_FILE_PATH" }
+        }
+    }
+
     return properties
 }
