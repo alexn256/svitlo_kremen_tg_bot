@@ -234,8 +234,8 @@ def main():
                         continue
 
                     # Обрабатываем только Полтавську філію (можно изменить на нужную)
-                    if current_branch != 'Полтавська':
-                        continue
+                    # if current_branch != 'Полтавська':
+                    #     continue
 
                     # Пропускаем строки без очереди или подочереди
                     if current_queue is None or current_subqueue is None:
