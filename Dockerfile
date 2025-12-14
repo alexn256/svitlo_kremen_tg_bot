@@ -23,8 +23,8 @@ FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 
-# Copy the built JAR from build stage
-COPY --from=build /app/bot/build/libs/bot-1.0.0.jar /app/bot.jar
+# Copy the built JAR from build stage (use wildcard to match any jar name)
+COPY --from=build /app/bot/build/libs/*.jar /app/bot.jar
 
 # Copy addresses.json
 COPY --from=build /app/parser/addresses.json /app/parser/addresses.json
