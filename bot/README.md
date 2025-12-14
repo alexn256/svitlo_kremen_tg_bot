@@ -37,7 +37,7 @@ python3 parse_pdf_v2.py
 
 ```bash
 cd bot/src/main/resources
-cp config.properties.example config.properties
+cp config.properties config.properties
 nano config.properties
 ```
 

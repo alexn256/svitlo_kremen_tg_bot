@@ -2,7 +2,15 @@
   "permissions": {
     "allow": [
       "Bash(python3:*)",
-      "Bash(pip3 install:*)"
+      "Bash(pip3 install:*)",
+      "Bash(npm run build)",
+      "Bash(./gradlew build)",
+      "Bash(gradle build)",
+      "Bash(java -version)",
+      "Bash(update-alternatives --list java)",
+      "Read(//usr/lib/jvm/**)",
+      "Bash(JAVA_HOME=/usr/lib/jvm/jdk-21.0.1 gradle build)",
+      "WebSearch"
     ]
   }
 }

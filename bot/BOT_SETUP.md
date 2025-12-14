@@ -36,7 +36,7 @@ cancel - Скасувати поточну операцію
 1. **Створіть конфігураційний файл:**
    ```bash
    cd bot/src/main/resources
-   cp config.properties.example config.properties
+   cp config.properties config.properties
    ```
 
 2. **Відредагуйте `config.properties`:**

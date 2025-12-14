@@ -17,34 +17,28 @@ import java.util.*
 
 private val logger = KotlinLogging.logger {}
 
-// Зберігаємо стан користувачів
 private val userStates = mutableMapOf<Long, UserData>()
 
 fun main() {
     logger.info { "Запуск Svitlo Kremen Telegram Bot..." }
 
-    // Завантаження конфігурації
     val config = loadConfig()
     val botToken = config.getProperty("bot.token")
         ?: throw IllegalStateException("BOT_TOKEN не знайдено в config.properties або змінних середовища")
 
     val addressesFilePath = config.getProperty("addresses.file.path", "../parser/addresses.json")
 
-    // Ініціалізація сервісу адрес
     val addressService = AddressService(addressesFilePath)
     logger.info { "Сервіс адрес ініціалізовано. Всього адрес: ${addressService.getTotalAddresses()}" }
 
-    // Створення бота
     val bot = bot {
         token = botToken
 
         dispatch {
-            // Команда /start
             command("start") {
                 val chatId = ChatId.fromId(message.chat.id)
                 val userId = message.from?.id ?: return@command
 
-                // Скидаємо стан користувача
                 userStates[userId] = UserData(userId)
 
                 val welcomeMessage = """
@@ -75,7 +69,6 @@ fun main() {
                 )
             }
 
-            // Команда /help
             command("help") {
                 val chatId = ChatId.fromId(message.chat.id)
 
@@ -102,7 +95,6 @@ fun main() {
                 bot.sendMessage(chatId = chatId, text = helpMessage)
             }
 
-            // Команда /cities - показати список міст
             command("cities") {
                 val chatId = ChatId.fromId(message.chat.id)
                 val cities = addressService.getCities()
@@ -122,7 +114,6 @@ fun main() {
                 bot.sendMessage(chatId = chatId, text = citiesMessage)
             }
 
-            // Команда /stats - статистика
             command("stats") {
                 val chatId = ChatId.fromId(message.chat.id)
                 val stats = addressService.getQueueStats()
@@ -140,7 +131,6 @@ fun main() {
                 bot.sendMessage(chatId = chatId, text = statsMessage)
             }
 
-            // Команда /cancel - скасувати операцію
             command("cancel") {
                 val chatId = ChatId.fromId(message.chat.id)
                 val userId = message.from?.id ?: return@command
@@ -153,12 +143,10 @@ fun main() {
                 )
             }
 
-            // Обробка callback кнопок
             callbackQuery("find_queue") {
                 val chatId = ChatId.fromId(callbackQuery.message?.chat?.id ?: return@callbackQuery)
                 val userId = callbackQuery.from.id
 
-                // Встановлюємо стан очікування адреси
                 userStates[userId] = UserData(userId, UserState.WAITING_FOR_ADDRESS)
 
                 val message = """
@@ -176,25 +164,21 @@ fun main() {
                 bot.answerCallbackQuery(callbackQuery.id)
             }
 
-            // Обробка текстових повідомлень
             message {
                 val chatId = ChatId.fromId(message.chat.id)
                 val userId = message.from?.id ?: return@message
                 val text = message.text ?: return@message
 
-                // Пропускаємо команди (вони обробляються окремо)
                 if (text.startsWith("/")) return@message
 
                 val userData = userStates[userId] ?: UserData(userId)
 
                 when (userData.state) {
                     UserState.WAITING_FOR_ADDRESS -> {
-                        // Обробка введеної адреси
                         handleAddressInput(bot, chatId, userId, text, addressService)
                     }
 
                     UserState.IDLE -> {
-                        // Якщо користувач ввів текст без команди, пробуємо знайти адресу
                         bot.sendMessage(
                             chatId = chatId,
                             text = "Для пошуку адреси натисніть /start і оберіть 'Дізнатися чергу'"
@@ -209,9 +193,6 @@ fun main() {
     bot.startPolling()
 }
 
-/**
- * Обробка введеної адреси користувачем
- */
 private fun handleAddressInput(
     bot: com.github.kotlintelegrambot.Bot,
     chatId: ChatId,
@@ -221,14 +202,11 @@ private fun handleAddressInput(
 ) {
     logger.info { "Користувач $userId шукає адресу: $addressText" }
 
-    // Спочатку відправляємо повідомлення про пошук
     bot.sendMessage(chatId = chatId, text = "🔍 Шукаю адресу...")
 
-    // Розумний пошук адреси
     val foundAddress = addressService.smartSearch(addressText)
 
     if (foundAddress != null) {
-        // Адресу знайдено
         val resultMessage = """
             ✅ Адресу знайдено!
 
@@ -254,11 +232,9 @@ private fun handleAddressInput(
             replyMarkup = keyboard
         )
 
-        // Скидаємо стан користувача
         userStates[userId] = UserData(userId, UserState.IDLE)
 
     } else {
-        // Адресу не знайдено
         val errorMessage = """
             ❌ Адресу не знайдено
 
@@ -275,18 +251,12 @@ private fun handleAddressInput(
         """.trimIndent()
 
         bot.sendMessage(chatId = chatId, text = errorMessage)
-
-        // Залишаємо стан очікування, щоб користувач міг спробувати знову
     }
 }
 
-/**
- * Завантаження конфігурації з файлу або змінних середовища
- */
 private fun loadConfig(): Properties {
     val properties = Properties()
 
-    // Спочатку пробуємо завантажити з файлу
     val configFile = File("src/main/resources/config.properties")
     if (configFile.exists()) {
         configFile.inputStream().use { properties.load(it) }
@@ -295,7 +265,6 @@ private fun loadConfig(): Properties {
         logger.warn { "Файл config.properties не знайдено, використовуємо змінні середовища" }
     }
 
-    // Якщо токена немає в файлі, пробуємо взяти зі змінної середовища
     if (!properties.containsKey("bot.token")) {
         val tokenFromEnv = System.getenv("BOT_TOKEN")
         if (tokenFromEnv != null) {
