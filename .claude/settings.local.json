@@ -10,7 +10,11 @@
       "Bash(update-alternatives --list java)",
       "Read(//usr/lib/jvm/**)",
       "Bash(JAVA_HOME=/usr/lib/jvm/jdk-21.0.1 gradle build)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(rm /home/alexn256/dev/projects/svitlo_kremen_tg_bot/Procfile)",
+      "Bash(git add Procfile)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nRemove Procfile to use Dockerfile CMD instead\n\nRailway was trying to execute the command from Procfile which had an\nincorrect path to the JAR file. Since Dockerfile already has the\ncorrect CMD instruction, removing Procfile to let Railway use it.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push)"
     ]
   }
 }
