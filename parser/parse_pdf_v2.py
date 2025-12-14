@@ -36,9 +36,10 @@ def parse_queue_number(text: str) -> Optional[int]:
 
 def parse_subqueue_number(text: str) -> Optional[int]:
     """Извлекает номер підчерги из текста"""
-    for name, num in SUBQUEUE_MAP.items():
+    # Проверяем в порядке от длинных к коротким, чтобы "ІІ" не матчилось как "І"
+    for name in sorted(SUBQUEUE_MAP.keys(), key=len, reverse=True):
         if f'{name} підчерга' in text:
-            return num
+            return SUBQUEUE_MAP[name]
     return None
 
 def expand_house_range(house_str: str) -> List[str]:
@@ -175,6 +176,10 @@ def parse_streets_in_text(text: str, city: Optional[str]) -> List[Dict[str, any]
     return results
 
 def main():
+    # Очищаємо файл пропущених рядків
+    with open('skipped_lines.txt', 'w', encoding='utf-8') as f:
+        f.write("=== Пропущені рядки при парсингу ===\n\n")
+
     rows = []
     stats = {
         'total_pages': 0,
@@ -258,6 +263,10 @@ def main():
 
                     if not parsed:
                         stats['skipped_lines'] += 1
+                        # Логуємо пропущений рядок
+                        with open('skipped_lines.txt', 'a', encoding='utf-8') as f:
+                            f.write(f"[Стр. {page_num}] Черга {current_queue}.{current_subqueue} - {current_branch}\n")
+                            f.write(f"  {address_text}\n\n")
                         continue
 
                     # Добавляем результаты
