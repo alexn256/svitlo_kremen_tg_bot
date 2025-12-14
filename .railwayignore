@@ -1,0 +1,12 @@
+.git
+.idea
+*.iml
+.gradle
+build/
+.vscode
+.DS_Store
+*.log
+*.md
+!README.md
+!QUICK_START.md
+bot/src/main/resources/config.properties
