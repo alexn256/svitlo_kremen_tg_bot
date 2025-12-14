@@ -1,0 +1,17 @@
+[providers]
+java = "21"
+
+[phases.setup]
+nixPkgs = ["...", "jdk21", "gradle"]
+
+[phases.install]
+cmds = ["echo 'Install phase'"]
+
+[phases.build]
+cmds = [
+  "chmod +x bot/gradlew",
+  "cd bot && ./gradlew clean build --no-daemon -x test"
+]
+
+[start]
+cmd = "java -jar bot/build/libs/bot-1.0.0.jar"
