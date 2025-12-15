@@ -24,10 +24,16 @@ data class Address(
 }
 
 enum class UserState {
-    IDLE, WAITING_FOR_ADDRESS
+    IDLE,
+    WAITING_FOR_ADDRESS,
+    CHOOSING_CITY,
+    CHOOSING_STREET,
+    CHOOSING_HOUSE
 }
 
 data class UserData(
     val userId: Long,
-    var state: UserState = UserState.IDLE
+    var state: UserState = UserState.IDLE,
+    var selectedCity: String? = null,
+    var selectedStreet: String? = null
 )

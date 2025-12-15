@@ -21,7 +21,12 @@
       "Bash(/dev/null)",
       "Bash(cat /home/alexn256/dev/projects/svitlo_kremen_tg_bot/parser/skipped_lines.txt)",
       "Bash(./gradlew build --stacktrace)",
-      "Bash(JAVA_HOME=/usr/lib/jvm/jdk-21.0.1 ./gradlew build)"
+      "Bash(JAVA_HOME=/usr/lib/jvm/jdk-21.0.1 ./gradlew build)",
+      "Bash(./gradlew compileKotlin)",
+      "Bash(./gradlew clean build)",
+      "Bash(JAVA_HOME=/usr/lib/jvm/jdk-21.0.1 ./gradlew clean compileKotlin --info)",
+      "Bash(JAVA_HOME=/usr/lib/jvm/jdk-21.0.1 ./gradlew clean compileKotlin)",
+      "Bash(JAVA_HOME=/usr/lib/jvm/jdk-21.0.1 ./gradlew --no-daemon --console=plain compileKotlin)"
     ]
   }
 }

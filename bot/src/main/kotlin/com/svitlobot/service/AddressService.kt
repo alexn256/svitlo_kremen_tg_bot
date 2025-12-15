@@ -75,6 +75,36 @@ class AddressService(private val jsonFilePath: String) {
             .sortedWith(compareBy({ it.filter { c -> c.isDigit() }.toIntOrNull() ?: 0 }, { it }))
     }
 
+    fun getStreetsPage(city: String, page: Int, pageSize: Int = 20): Pair<List<String>, Int> {
+        val allStreets = getStreets(city)
+        val totalPages = (allStreets.size + pageSize - 1) / pageSize
+        val startIndex = page * pageSize
+        val endIndex = minOf(startIndex + pageSize, allStreets.size)
+
+        val streetsOnPage = if (startIndex < allStreets.size) {
+            allStreets.subList(startIndex, endIndex)
+        } else {
+            emptyList()
+        }
+
+        return Pair(streetsOnPage, totalPages)
+    }
+
+    fun getHousesPage(city: String, street: String, page: Int, pageSize: Int = 20): Pair<List<String>, Int> {
+        val allHouses = getHouses(city, street)
+        val totalPages = (allHouses.size + pageSize - 1) / pageSize
+        val startIndex = page * pageSize
+        val endIndex = minOf(startIndex + pageSize, allHouses.size)
+
+        val housesOnPage = if (startIndex < allHouses.size) {
+            allHouses.subList(startIndex, endIndex)
+        } else {
+            emptyList()
+        }
+
+        return Pair(housesOnPage, totalPages)
+    }
+
     fun searchAddresses(query: String, limit: Int = 10): List<Address> {
         val normalizedQuery = query.trim().lowercase()
 
