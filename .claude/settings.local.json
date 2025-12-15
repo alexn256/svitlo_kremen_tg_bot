@@ -19,7 +19,9 @@
       "Bash(pip install pdfplumber)",
       "Bash(cat /home/alexn256/dev/projects/svitlo_kremen_tg_bot/parser/parsing_stats.txt)",
       "Bash(/dev/null)",
-      "Bash(cat /home/alexn256/dev/projects/svitlo_kremen_tg_bot/parser/skipped_lines.txt)"
+      "Bash(cat /home/alexn256/dev/projects/svitlo_kremen_tg_bot/parser/skipped_lines.txt)",
+      "Bash(./gradlew build --stacktrace)",
+      "Bash(JAVA_HOME=/usr/lib/jvm/jdk-21.0.1 ./gradlew build)"
     ]
   }
 }

@@ -19,6 +19,59 @@ private val logger = KotlinLogging.logger {}
 
 private val userStates = mutableMapOf<Long, UserData>()
 
+private fun sendCitiesPage(
+    bot: com.github.kotlintelegrambot.Bot,
+    chatId: ChatId,
+    page: Int,
+    addressService: AddressService
+) {
+    val (cities, totalPages) = addressService.getCitiesPage(page, 20)
+    val allCities = addressService.getCities()
+
+    val citiesMessage = buildString {
+        appendLine("🏙 Доступні міста та села (сторінка ${page + 1} з $totalPages):")
+        appendLine()
+        cities.forEach { city ->
+            appendLine("• $city")
+        }
+        appendLine()
+        appendLine("Всього міст/сіл: ${allCities.size}")
+    }
+
+    // Создаем кнопки навигации
+    val buttons = mutableListOf<InlineKeyboardButton>()
+
+    if (page > 0) {
+        buttons.add(
+            InlineKeyboardButton.CallbackData(
+                text = "⬅️ Попередня",
+                callbackData = "cities_page_${page - 1}"
+            )
+        )
+    }
+
+    if (page < totalPages - 1) {
+        buttons.add(
+            InlineKeyboardButton.CallbackData(
+                text = "Наступна ➡️",
+                callbackData = "cities_page_${page + 1}"
+            )
+        )
+    }
+
+    val keyboard = if (buttons.isNotEmpty()) {
+        InlineKeyboardMarkup.create(buttons)
+    } else {
+        null
+    }
+
+    bot.sendMessage(
+        chatId = chatId,
+        text = citiesMessage,
+        replyMarkup = keyboard
+    )
+}
+
 fun main() {
     logger.info { "Запуск Svitlo Kremen Telegram Bot..." }
 
@@ -45,7 +98,7 @@ fun main() {
                     👋 Вітаємо!
 
                     Я бот для перевірки черги відключень електроенергії у Полтавській області за адресою.
-                    Мене створила мила дівчинка Сонечка Мармеладова (@M_AHTS) 💫
+                    👧 Мене створила мила дівчинка Сонечка Мармеладова (@M_AHTS).
 
                     📍 Я можу допомогти вам дізнатися вашу чергу відключень за адресою.
 
@@ -81,14 +134,18 @@ fun main() {
                     2️⃣ Введіть вашу адресу
 
                     📝 Приклади введення адреси:
-                    • м.Полтава, Індустріальна, 10А
-                    • Кременчук Перемоги 12
-                    • м.Лубни Київська 15
+                    • Горішні Плавні/Портова/1
+                    • м.Полтава*Індустріальна*10А
+                    • Кременчук-Перемоги-12
+                    • м.Лубни, Київська, 15
+
+                    ℹ️ Розділювачі: / * - або ,
+                    Регістр букв не має значення
 
                     ℹ️ Команди:
                     /start - Початок роботи
                     /help - Ця довідка
-                    /cities - Список міст
+                    /cities - Список міст (з навігацією)
                     /stats - Статистика
                     /cancel - Скасувати поточну операцію
                 """.trimIndent()
@@ -98,21 +155,7 @@ fun main() {
 
             command("cities") {
                 val chatId = ChatId.fromId(message.chat.id)
-                val cities = addressService.getCities()
-
-                val citiesMessage = buildString {
-                    appendLine("🏙 Доступні міста та села:")
-                    appendLine()
-                    cities.take(50).forEach { city ->
-                        appendLine("• $city")
-                    }
-                    if (cities.size > 50) {
-                        appendLine()
-                        appendLine("... і ще ${cities.size - 50} міст/сіл")
-                    }
-                }
-
-                bot.sendMessage(chatId = chatId, text = citiesMessage)
+                sendCitiesPage(bot, chatId, 0, addressService)
             }
 
             command("stats") {
@@ -154,15 +197,29 @@ fun main() {
                     📍 Введіть вашу адресу
 
                     Приклади:
-                    • м.Полтава, Індустріальна, 10А
-                    • Кременчук Перемоги 12
-                    • м.Лубни Київська 15
+                    • Горішні Плавні/Портова/1
+                    • м.Полтава*Індустріальна*10А
+                    • Кременчук-Перемоги-12
+                    • м.Лубни, Київська, 15
+
+                    Ви можете використовувати розділювачі: / * - або ,
 
                     Для скасування введіть /cancel
                 """.trimIndent()
 
                 bot.sendMessage(chatId = chatId, text = message)
                 bot.answerCallbackQuery(callbackQuery.id)
+            }
+
+            callbackQuery {
+                val data = callbackQuery.data
+                if (data.startsWith("cities_page_")) {
+                    val chatId = ChatId.fromId(callbackQuery.message?.chat?.id ?: return@callbackQuery)
+                    val page = data.removePrefix("cities_page_").toIntOrNull() ?: 0
+
+                    sendCitiesPage(bot, chatId, page, addressService)
+                    bot.answerCallbackQuery(callbackQuery.id)
+                }
             }
 
             message {
@@ -247,9 +304,12 @@ private fun handleAddressInput(
             💡 Спробуйте ще раз або перегляньте список міст: /cities
 
             Приклади правильного формату:
-            • м.Полтава, Індустріальна, 10А
-            • Кременчук Перемоги 12
-            • м.Лубни Київська 15
+            • Горішні Плавні/Портова/1
+            • м.Полтава*Індустріальна*10А
+            • Кременчук-Перемоги-12
+            • м.Лубни, Київська, 15
+
+            Ви можете використовувати розділювачі: / * - або ,
         """.trimIndent()
 
         bot.sendMessage(chatId = chatId, text = errorMessage)

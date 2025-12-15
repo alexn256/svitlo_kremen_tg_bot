@@ -40,6 +40,21 @@ class AddressService(private val jsonFilePath: String) {
             .sorted()
     }
 
+    fun getCitiesPage(page: Int, pageSize: Int = 20): Pair<List<String>, Int> {
+        val allCities = getCities()
+        val totalPages = (allCities.size + pageSize - 1) / pageSize
+        val startIndex = page * pageSize
+        val endIndex = minOf(startIndex + pageSize, allCities.size)
+
+        val citiesOnPage = if (startIndex < allCities.size) {
+            allCities.subList(startIndex, endIndex)
+        } else {
+            emptyList()
+        }
+
+        return Pair(citiesOnPage, totalPages)
+    }
+
     fun getStreets(city: String): List<String> {
         return addresses
             .filter { it.city.equals(city, ignoreCase = true) }
@@ -72,14 +87,16 @@ class AddressService(private val jsonFilePath: String) {
     fun parseAddressFromText(text: String): Triple<String, String, String>? {
         val normalized = text.trim()
 
-        val commaPattern = Regex("""([^,]+),\s*([^,]+),\s*(.+)""")
-        commaPattern.find(normalized)?.let { match ->
+        // Поддержка различных разделителей: запятая, слэш, звездочка, тире
+        val separatorPattern = Regex("""([^,/\*\-]+)[,/\*\-]\s*([^,/\*\-]+)[,/\*\-]\s*(.+)""")
+        separatorPattern.find(normalized)?.let { match ->
             val city = match.groupValues[1].trim()
             val street = match.groupValues[2].trim()
             val house = match.groupValues[3].trim()
             return Triple(city, street, house)
         }
 
+        // Парсинг через пробелы (для обратной совместимости)
         val parts = normalized.split(Regex("""\s+"""))
         if (parts.size >= 3) {
             val house = parts.last()
