@@ -1,0 +1,614 @@
+[
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "вул. Зіньківська",
+    "house": "51/2 АТ \"Полтавахолод\""
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "вул. Зіньківська",
+    "house": "51/2"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "вул. Зіньківська",
+    "house": "53. Артема Амеліна"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "вул. Зіньківська",
+    "house": "26"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "вул. Зіньківська",
+    "house": "24"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "вул. Зіньківська",
+    "house": "21а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "вул. Зіньківська",
+    "house": "17. Ричанська"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "вул. Зіньківська",
+    "house": "31.ратства Тарасівців"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "вул. Зіньківська",
+    "house": "8/20. Селянська"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "вул. Зіньківська",
+    "house": "20"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "ПЗ ЗБВ -",
+    "house": "1\""
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "вул. Братства Тарасівців",
+    "house": "8/20"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "2"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "6"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "25/34"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "35а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "35"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "25"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "27"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "27а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "27в"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "33"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "33а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "35"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "37"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "39"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "39а Винахідницька"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "8"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "1а"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "1-ша Черепична"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "Вул. Української Центральної Ради",
+    "house": "2-га Черепична"
+  },
+  {
+    "branch": "Полтавська",
+    "queue": 1,
+    "subqueue": 1,
+    "queue_full": "1.1",
+    "city": "",
+    "street": "вул. Селянська",
+    "house": "20"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Куценка",
+    "house": "16"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Куценка",
+    "house": "18"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Куценка",
+    "house": "30"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Куценка",
+    "house": "34"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Куценка",
+    "house": "35"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Куценка",
+    "house": "38"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Куценка",
+    "house": "60"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Куценка",
+    "house": "62"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Куценка",
+    "house": "72"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Куценка",
+    "house": "76"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Куценка",
+    "house": "78"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Миру",
+    "house": "17"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Миру",
+    "house": "19"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Миру",
+    "house": "21"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Миру",
+    "house": "34"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Миру",
+    "house": "38"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Миру",
+    "house": "3"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Миру",
+    "house": "5"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Миру",
+    "house": "6"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Миру",
+    "house": "7"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Миру",
+    "house": "8"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Миру",
+    "house": "9"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Миру",
+    "house": "12-20(парні"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Миру",
+    "house": "26"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Миру",
+    "house": "28"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Греблянська",
+    "house": "10"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Греблянська",
+    "house": "12"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Греблянська",
+    "house": "17"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Греблянська",
+    "house": "26"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Греблянська",
+    "house": "30"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Греблянська",
+    "house": "38"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Греблянська",
+    "house": "40"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Греблянська",
+    "house": "6"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Греблянська",
+    "house": "8"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Греблянська",
+    "house": "12"
+  },
+  {
+    "branch": "Кременчуцька",
+    "queue": 2,
+    "subqueue": 1,
+    "queue_full": "2.1",
+    "city": "с.В",
+    "street": "вул. Греблянська",
+    "house": "14"
+  }
+]
