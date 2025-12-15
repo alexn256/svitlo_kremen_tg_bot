@@ -1,4 +1,5 @@
 package com.svitlobot.service
+
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.svitlobot.model.Address
@@ -86,8 +87,6 @@ class AddressService(private val jsonFilePath: String) {
 
     fun parseAddressFromText(text: String): Triple<String, String, String>? {
         val normalized = text.trim()
-
-        // Поддержка различных разделителей: запятая, слэш, звездочка, тире
         val separatorPattern = Regex("""([^,/\*\-]+)[,/\*\-]\s*([^,/\*\-]+)[,/\*\-]\s*(.+)""")
         separatorPattern.find(normalized)?.let { match ->
             val city = match.groupValues[1].trim()
@@ -95,8 +94,6 @@ class AddressService(private val jsonFilePath: String) {
             val house = match.groupValues[3].trim()
             return Triple(city, street, house)
         }
-
-        // Парсинг через пробелы (для обратной совместимости)
         val parts = normalized.split(Regex("""\s+"""))
         if (parts.size >= 3) {
             val house = parts.last()
@@ -107,22 +104,18 @@ class AddressService(private val jsonFilePath: String) {
                 return Triple(city, street, house)
             }
         }
-
         return null
     }
 
     fun smartSearch(text: String): Address? {
         parseAddressFromText(text)?.let { (city, street, house) ->
-
             findQueue(city, street, house)?.let { return it }
-
             listOf("м.$city", "с.$city").forEach { cityVariant ->
                 listOf("вул. $street", "пров. $street", street).forEach { streetVariant ->
                     findQueue(cityVariant, streetVariant, house)?.let { return it }
                 }
             }
         }
-
         val results = searchAddresses(text, 1)
         return results.firstOrNull()
     }

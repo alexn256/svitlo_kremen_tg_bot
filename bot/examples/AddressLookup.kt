@@ -4,10 +4,6 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.File
 
-/**
- * Пример использования данных парсера в Kotlin Telegram боте
- */
-
 data class Address(
     val branch: String,
     val queue: Int,
@@ -22,7 +18,6 @@ class AddressLookup(private val jsonFilePath: String) {
     private val addresses: List<Address>
 
     init {
-        // Загружаем данные из JSON файла
         val jsonString = File(jsonFilePath).readText()
         val gson = Gson()
         val addressListType = object : TypeToken<List<Address>>() {}.type
@@ -31,9 +26,6 @@ class AddressLookup(private val jsonFilePath: String) {
         println("Загружено ${addresses.size} адресов")
     }
 
-    /**
-     * Поиск очереди по адресу
-     */
     fun findQueue(city: String, street: String, house: String): String? {
         val normalizedCity = city.trim()
         val normalizedStreet = street.trim()
@@ -48,9 +40,6 @@ class AddressLookup(private val jsonFilePath: String) {
         return found?.queue_full
     }
 
-    /**
-     * Получить список всех городов
-     */
     fun getCities(): List<String> {
         return addresses
             .map { it.city }
@@ -59,9 +48,6 @@ class AddressLookup(private val jsonFilePath: String) {
             .sorted()
     }
 
-    /**
-     * Получить список улиц в городе
-     */
     fun getStreets(city: String): List<String> {
         return addresses
             .filter { it.city.equals(city, ignoreCase = true) }
@@ -70,9 +56,6 @@ class AddressLookup(private val jsonFilePath: String) {
             .sorted()
     }
 
-    /**
-     * Получить список домов на улице
-     */
     fun getHouses(city: String, street: String): List<String> {
         return addresses
             .filter {
@@ -84,9 +67,6 @@ class AddressLookup(private val jsonFilePath: String) {
             .sortedWith(compareBy({ it.filter { c -> c.isDigit() }.toIntOrNull() ?: 0 }, { it }))
     }
 
-    /**
-     * Поиск адресов по частичному совпадению
-     */
     fun searchAddresses(query: String): List<Address> {
         val normalizedQuery = query.trim().lowercase()
 
@@ -94,12 +74,9 @@ class AddressLookup(private val jsonFilePath: String) {
             addr.city.lowercase().contains(normalizedQuery) ||
             addr.street.lowercase().contains(normalizedQuery) ||
             addr.house.lowercase().contains(normalizedQuery)
-        }.take(20) // Ограничиваем результаты
+        }.take(20)
     }
 
-    /**
-     * Получить статистику по очередям
-     */
     fun getQueueStats(): Map<String, Int> {
         return addresses
             .groupBy { it.queue_full }
@@ -108,13 +85,8 @@ class AddressLookup(private val jsonFilePath: String) {
     }
 }
 
-/**
- * Пример использования в Telegram боте
- */
 fun main() {
-    // Путь к JSON файлу с адресами
     val lookup = AddressLookup("../../parser/addresses.json")
-
     println("\n=== Пример 1: Поиск очереди по адресу ===")
     val queue = lookup.findQueue("м.Полтава", "вул. Грабчака", "10")
     if (queue != null) {
@@ -153,9 +125,6 @@ fun main() {
     }
 }
 
-/**
- * Пример обработчика команд для Telegram бота
- */
 class TelegramBotHandler(private val lookup: AddressLookup) {
 
     fun handleStart(): String {

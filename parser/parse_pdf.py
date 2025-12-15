@@ -24,7 +24,6 @@ def expand_houses(house_part: str):
             result.extend(str(i) for i in range(start, end + 1))
 
         else:
-            # 20/2, 17А и т.п.
             result.append(p)
 
     return result

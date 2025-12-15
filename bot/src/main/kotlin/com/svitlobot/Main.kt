@@ -38,7 +38,6 @@ private fun sendCitiesPage(
         appendLine("Всього міст/сіл: ${allCities.size}")
     }
 
-    // Создаем кнопки навигации
     val buttons = mutableListOf<InlineKeyboardButton>()
 
     if (page > 0) {
