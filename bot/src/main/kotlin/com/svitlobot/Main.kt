@@ -289,7 +289,7 @@ private fun sendHousesSelection(
 }
 
 fun main() {
-    logger.info { "Запуск Svitlo Kremen Telegram Bot..." }
+    logger.info { "Starting Svitlo Kremen Telegram Bot..." }
 
     val config = loadConfig()
     val botToken = config.getProperty("bot.token")
@@ -298,7 +298,7 @@ fun main() {
     val addressesFilePath = config.getProperty("addresses.file.path", "../parser/addresses.json")
 
     val addressService = AddressService(addressesFilePath)
-    logger.info { "Сервіс адрес ініціалізовано. Всього адрес: ${addressService.getTotalAddresses()}" }
+    logger.info { "Address service initialized. Total addresses: ${addressService.getTotalAddresses()}" }
 
     val bot = bot {
         token = botToken
@@ -598,7 +598,7 @@ fun main() {
         }
     }
 
-    logger.info { "Бот запущено успішно!" }
+    logger.info { "Bot started successfully!" }
     bot.startPolling()
 }
 
@@ -609,7 +609,7 @@ private fun handleAddressInput(
     addressText: String,
     addressService: AddressService
 ) {
-    logger.info { "Користувач $userId шукає адресу: $addressText" }
+    logger.info { "User $userId is searching for address: $addressText" }
 
     bot.sendMessage(chatId = chatId, text = "🔍 Шукаю адресу...")
 
@@ -673,16 +673,16 @@ private fun loadConfig(): Properties {
     val configFile = File("src/main/resources/config.properties")
     if (configFile.exists()) {
         configFile.inputStream().use { properties.load(it) }
-        logger.info { "Конфігурацію завантажено з файлу" }
+        logger.info { "Configuration loaded from file" }
     } else {
-        logger.warn { "Файл config.properties не знайдено, використовуємо змінні середовища" }
+        logger.warn { "config.properties file not found, using environment variables" }
     }
 
     if (!properties.containsKey("bot.token")) {
         val tokenFromEnv = System.getenv("BOT_TOKEN")
         if (tokenFromEnv != null) {
             properties.setProperty("bot.token", tokenFromEnv)
-            logger.info { "Токен бота завантажено зі змінної середовища BOT_TOKEN" }
+            logger.info { "Bot token loaded from BOT_TOKEN environment variable" }
         }
     }
 
@@ -690,7 +690,7 @@ private fun loadConfig(): Properties {
         val addressesPathFromEnv = System.getenv("ADDRESSES_FILE_PATH")
         if (addressesPathFromEnv != null) {
             properties.setProperty("addresses.file.path", addressesPathFromEnv)
-            logger.info { "Шлях до файлу адрес завантажено зі змінної середовища ADDRESSES_FILE_PATH" }
+            logger.info { "Addresses file path loaded from ADDRESSES_FILE_PATH environment variable" }
         }
     }
 

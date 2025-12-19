@@ -15,7 +15,7 @@ class AddressService(private val jsonFilePath: String) {
     private val gson = Gson()
 
     init {
-        logger.info { "Завантаження адрес з файлу: $jsonFilePath" }
+        logger.info { "Loading addresses from file: $jsonFilePath" }
 
         val file = File(jsonFilePath)
         if (!file.exists()) {
@@ -26,7 +26,7 @@ class AddressService(private val jsonFilePath: String) {
         val addressListType = object : TypeToken<List<Address>>() {}.type
         addresses = gson.fromJson(jsonString, addressListType)
 
-        logger.info { "Завантажено ${addresses.size} адрес" }
+        logger.info { "Loaded ${addresses.size} addresses" }
     }
 
     fun findQueue(city: String, street: String, house: String): Address? {
