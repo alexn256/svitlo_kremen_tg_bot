@@ -27,7 +27,6 @@ private fun sendCitiesPage(
 ) {
     val (cities, totalPages) = addressService.getCitiesPage(page, 20)
     val allCities = addressService.getCities()
-
     val citiesMessage = buildString {
         appendLine("🏙 Доступні міста та села (сторінка ${page + 1} з $totalPages):")
         appendLine()
@@ -37,9 +36,7 @@ private fun sendCitiesPage(
         appendLine()
         appendLine("Всього міст/сіл: ${allCities.size}")
     }
-
     val buttons = mutableListOf<InlineKeyboardButton>()
-
     if (page > 0) {
         buttons.add(
             InlineKeyboardButton.CallbackData(
@@ -48,7 +45,6 @@ private fun sendCitiesPage(
             )
         )
     }
-
     if (page < totalPages - 1) {
         buttons.add(
             InlineKeyboardButton.CallbackData(
@@ -57,13 +53,11 @@ private fun sendCitiesPage(
             )
         )
     }
-
     val keyboard = if (buttons.isNotEmpty()) {
         InlineKeyboardMarkup.create(buttons)
     } else {
         null
     }
-
     bot.sendMessage(
         chatId = chatId,
         text = citiesMessage,
@@ -78,16 +72,12 @@ private fun sendCitiesSelection(
     addressService: AddressService
 ) {
     val (cities, totalPages) = addressService.getCitiesPage(page, 10)
-
     val message = buildString {
         appendLine("🏙 Оберіть ваше місто/село:")
         appendLine()
         appendLine("(Сторінка ${page + 1} з $totalPages)")
     }
-
     val buttons = mutableListOf<List<InlineKeyboardButton>>()
-
-    // Добавляем кнопки городов (по 2 в ряд)
     cities.chunked(2).forEach { citiesInRow ->
         buttons.add(citiesInRow.map { city ->
             InlineKeyboardButton.CallbackData(
@@ -96,8 +86,6 @@ private fun sendCitiesSelection(
             )
         })
     }
-
-    // Добавляем навигацию
     val navigationButtons = mutableListOf<InlineKeyboardButton>()
     if (page > 0) {
         navigationButtons.add(
@@ -118,8 +106,6 @@ private fun sendCitiesSelection(
     if (navigationButtons.isNotEmpty()) {
         buttons.add(navigationButtons)
     }
-
-    // Кнопка отмены
     buttons.add(
         listOf(
             InlineKeyboardButton.CallbackData(
@@ -128,9 +114,7 @@ private fun sendCitiesSelection(
             )
         )
     )
-
     val keyboard = InlineKeyboardMarkup.create(buttons)
-
     bot.sendMessage(
         chatId = chatId,
         text = message,
@@ -146,7 +130,6 @@ private fun sendStreetsSelection(
     addressService: AddressService
 ) {
     val (streets, totalPages) = addressService.getStreetsPage(city, page, 10)
-
     val message = buildString {
         appendLine("📍 Місто: $city")
         appendLine()
@@ -154,10 +137,7 @@ private fun sendStreetsSelection(
         appendLine()
         appendLine("(Сторінка ${page + 1} з $totalPages)")
     }
-
     val buttons = mutableListOf<List<InlineKeyboardButton>>()
-
-    // Добавляем кнопки улиц (по 2 в ряд)
     streets.chunked(2).forEach { streetsInRow ->
         buttons.add(streetsInRow.map { street ->
             InlineKeyboardButton.CallbackData(
@@ -166,8 +146,6 @@ private fun sendStreetsSelection(
             )
         })
     }
-
-    // Добавляем навигацию
     val navigationButtons = mutableListOf<InlineKeyboardButton>()
     if (page > 0) {
         navigationButtons.add(
@@ -188,8 +166,6 @@ private fun sendStreetsSelection(
     if (navigationButtons.isNotEmpty()) {
         buttons.add(navigationButtons)
     }
-
-    // Кнопки назад и отмены
     buttons.add(
         listOf(
             InlineKeyboardButton.CallbackData(
@@ -202,9 +178,7 @@ private fun sendStreetsSelection(
             )
         )
     )
-
     val keyboard = InlineKeyboardMarkup.create(buttons)
-
     bot.sendMessage(
         chatId = chatId,
         text = message,
@@ -221,7 +195,6 @@ private fun sendHousesSelection(
     addressService: AddressService
 ) {
     val (houses, totalPages) = addressService.getHousesPage(city, street, page, 15)
-
     val message = buildString {
         appendLine("📍 Місто: $city")
         appendLine("🏘 Вулиця: $street")
@@ -232,8 +205,6 @@ private fun sendHousesSelection(
     }
 
     val buttons = mutableListOf<List<InlineKeyboardButton>>()
-
-    // Добавляем кнопки домов (по 4 в ряд)
     houses.chunked(4).forEach { housesInRow ->
         buttons.add(housesInRow.map { house ->
             InlineKeyboardButton.CallbackData(
@@ -242,8 +213,6 @@ private fun sendHousesSelection(
             )
         })
     }
-
-    // Добавляем навигацию
     val navigationButtons = mutableListOf<InlineKeyboardButton>()
     if (page > 0) {
         navigationButtons.add(
@@ -264,8 +233,6 @@ private fun sendHousesSelection(
     if (navigationButtons.isNotEmpty()) {
         buttons.add(navigationButtons)
     }
-
-    // Кнопки назад и отмены
     buttons.add(
         listOf(
             InlineKeyboardButton.CallbackData(
@@ -278,9 +245,7 @@ private fun sendHousesSelection(
             )
         )
     )
-
     val keyboard = InlineKeyboardMarkup.create(buttons)
-
     bot.sendMessage(
         chatId = chatId,
         text = message,
@@ -419,21 +384,18 @@ fun main() {
                 val userId = callbackQuery.from.id
 
                 when {
-                    // Пагинация для команды /cities
                     data.startsWith("cities_page_") -> {
                         val page = data.removePrefix("cities_page_").toIntOrNull() ?: 0
                         sendCitiesPage(bot, chatId, page, addressService)
                         bot.answerCallbackQuery(callbackQuery.id)
                     }
 
-                    // Пагинация для выбора города
                     data.startsWith("select_city_page:") -> {
                         val page = data.removePrefix("select_city_page:").toIntOrNull() ?: 0
                         sendCitiesSelection(bot, chatId, page, addressService)
                         bot.answerCallbackQuery(callbackQuery.id)
                     }
 
-                    // Выбор города
                     data.startsWith("select_city:") -> {
                         val city = data.removePrefix("select_city:")
                         val userData = userStates[userId] ?: UserData(userId)
@@ -445,7 +407,6 @@ fun main() {
                         bot.answerCallbackQuery(callbackQuery.id)
                     }
 
-                    // Пагинация для выбора улицы
                     data.startsWith("select_street_page:") -> {
                         val page = data.removePrefix("select_street_page:").toIntOrNull() ?: 0
                         val userData = userStates[userId]
@@ -455,7 +416,6 @@ fun main() {
                         bot.answerCallbackQuery(callbackQuery.id)
                     }
 
-                    // Выбор улицы
                     data.startsWith("select_street:") -> {
                         val street = data.removePrefix("select_street:")
                         val userData = userStates[userId] ?: return@callbackQuery
@@ -469,7 +429,6 @@ fun main() {
                         bot.answerCallbackQuery(callbackQuery.id)
                     }
 
-                    // Пагинация для выбора дома
                     data.startsWith("select_house_page:") -> {
                         val page = data.removePrefix("select_house_page:").toIntOrNull() ?: 0
                         val userData = userStates[userId]
@@ -480,7 +439,6 @@ fun main() {
                         bot.answerCallbackQuery(callbackQuery.id)
                     }
 
-                    // Выбор дома - показываем результат
                     data.startsWith("select_house:") -> {
                         val house = data.removePrefix("select_house:")
                         val userData = userStates[userId] ?: return@callbackQuery
@@ -526,7 +484,6 @@ fun main() {
                         bot.answerCallbackQuery(callbackQuery.id)
                     }
 
-                    // Кнопка "Назад до міст"
                     data == "back_to_cities" -> {
                         val userData = userStates[userId] ?: UserData(userId)
                         userData.selectedCity = null
@@ -538,7 +495,6 @@ fun main() {
                         bot.answerCallbackQuery(callbackQuery.id)
                     }
 
-                    // Кнопка "Назад до вулиць"
                     data == "back_to_streets" -> {
                         val userData = userStates[userId] ?: return@callbackQuery
                         val city = userData.selectedCity ?: return@callbackQuery
@@ -551,7 +507,6 @@ fun main() {
                         bot.answerCallbackQuery(callbackQuery.id)
                     }
 
-                    // Кнопка отмены
                     data == "cancel_selection" -> {
                         userStates[userId] = UserData(userId, UserState.IDLE)
 

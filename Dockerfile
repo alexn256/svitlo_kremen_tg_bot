@@ -13,7 +13,7 @@ COPY parser/addresses.json /app/parser/addresses.json
 WORKDIR /app/bot
 RUN ./gradlew clean build --no-daemon -x test
 
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:21-jre-alpine
 
 WORKDIR /app
 
