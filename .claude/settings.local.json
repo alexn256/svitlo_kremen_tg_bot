@@ -28,13 +28,7 @@
       "Bash(JAVA_HOME=/usr/lib/jvm/jdk-21.0.1 ./gradlew clean compileKotlin)",
       "Bash(JAVA_HOME=/usr/lib/jvm/jdk-21.0.1 ./gradlew --no-daemon --console=plain compileKotlin)",
       "Bash(cat addresses.json)",
-      "Bash(JAVA_HOME=/usr/lib/jvm/jdk-21.0.1 ./gradlew clean build)",
-      "Bash(pip install openpyxl)",
-      "Bash(venv/bin/pip install openpyxl)",
-      "Bash(if [ -f ../parser/addresses.json ])",
-      "Bash(then python3 -c \"import json; data = json.load(open(''../parser/addresses.json'')); print(f''OLD addresses.json count: {len(data)}'')\")",
-      "Bash(else echo \"File does not exist\")",
-      "Bash(fi)"
+      "Bash(JAVA_HOME=/usr/lib/jvm/jdk-21.0.1 ./gradlew clean build)"
     ]
   }
 }

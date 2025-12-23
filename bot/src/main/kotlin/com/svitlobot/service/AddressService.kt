@@ -16,13 +16,16 @@ class AddressService(private val jsonFilePath: String) {
 
     init {
         logger.info { "Loading addresses from file: $jsonFilePath" }
+
         val file = File(jsonFilePath)
         if (!file.exists()) {
             throw IllegalArgumentException("Файл не знайдено: $jsonFilePath")
         }
+
         val jsonString = file.readText()
         val addressListType = object : TypeToken<List<Address>>() {}.type
         addresses = gson.fromJson(jsonString, addressListType)
+
         logger.info { "Loaded ${addresses.size} addresses" }
     }
 
@@ -43,11 +46,13 @@ class AddressService(private val jsonFilePath: String) {
         val totalPages = (allCities.size + pageSize - 1) / pageSize
         val startIndex = page * pageSize
         val endIndex = minOf(startIndex + pageSize, allCities.size)
+
         val citiesOnPage = if (startIndex < allCities.size) {
             allCities.subList(startIndex, endIndex)
         } else {
             emptyList()
         }
+
         return Pair(citiesOnPage, totalPages)
     }
 
@@ -75,11 +80,13 @@ class AddressService(private val jsonFilePath: String) {
         val totalPages = (allStreets.size + pageSize - 1) / pageSize
         val startIndex = page * pageSize
         val endIndex = minOf(startIndex + pageSize, allStreets.size)
+
         val streetsOnPage = if (startIndex < allStreets.size) {
             allStreets.subList(startIndex, endIndex)
         } else {
             emptyList()
         }
+
         return Pair(streetsOnPage, totalPages)
     }
 
@@ -88,16 +95,19 @@ class AddressService(private val jsonFilePath: String) {
         val totalPages = (allHouses.size + pageSize - 1) / pageSize
         val startIndex = page * pageSize
         val endIndex = minOf(startIndex + pageSize, allHouses.size)
+
         val housesOnPage = if (startIndex < allHouses.size) {
             allHouses.subList(startIndex, endIndex)
         } else {
             emptyList()
         }
+
         return Pair(housesOnPage, totalPages)
     }
 
     fun searchAddresses(query: String, limit: Int = 10): List<Address> {
         val normalizedQuery = query.trim().lowercase()
+
         return addresses.filter { addr ->
             addr.city.lowercase().contains(normalizedQuery) ||
             addr.street.lowercase().contains(normalizedQuery) ||
